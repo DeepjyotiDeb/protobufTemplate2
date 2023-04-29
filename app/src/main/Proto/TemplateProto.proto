@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_package = "com.smartpaper.prototemplate2";
+option java_multiple_files = true;
+
+message TemplateSetting {
+  //  int32 example_counter = 1;
+  bool status = 1;
+  string token = 2;
+  UserDetail userDetail = 3;
+}
+message UserDetail {
+  string _id = 1;
+  string email = 2;
+  string organizationId = 3;
+  string organizationName = 4;
+  Type type = 5;
+  bool isVerified = 6;
+  string language = 7;
+  string otpGeneratedAt = 8;
+  string otpVerifiedAt = 9;
+  string name = 10;
+}
+
+enum Type {
+  admin = 0;
+  author = 1;
+  teacher = 2;
+}
